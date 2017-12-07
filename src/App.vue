@@ -44,7 +44,7 @@
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    /*color: #2c3e50;*/
     margin: 0;
     padding: 0;
     text-align: center;
@@ -61,7 +61,7 @@
     color: #fff;
   }
   .el-menu-item, .el-submenu__title{
-    padding: 0 10px;
+    padding: 0 5px;
   }
   .el-menu-item.is-active i{
     color: rgb(17, 147, 242);
