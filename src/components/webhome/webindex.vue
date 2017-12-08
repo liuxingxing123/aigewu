@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>用户首页</h1>
-        <el-button type="success">点击进入商务室</el-button>
+        <a href="#/webmanage"></a><el-button type="success">点击进入管理界面</el-button>
     </div>
 </template>
 

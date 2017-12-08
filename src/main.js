@@ -70,9 +70,9 @@ import casesManage from './components/webManage/backstage_shop/caseManage/casesM
 
 import userlogin from './components/login/userlogin.vue';
 import managelogin from './components/login/managelogin.vue';
-import userindex from './components/userhome/userindex.vue';
-import manageindex from './components/webhome/manageindex.vue';
-import manage from './components/webManage/manage.vue';
+import webindex from './components/webhome/webindex.vue';
+import managewebindex from './components/managewebhome/managewebindex.vue';
+import webmanage from './components/webManage/webmanage.vue';
 import manageWebManage from './components/manageWebManage/manageWebManage.vue';
 
 import './common/style/style.css';
@@ -294,9 +294,9 @@ const routes = [
   },
     {path: '/userlogin', component: userlogin},
     {path: '/managelogin', component: managelogin},
-    {path: '/userindex', component: userindex},
-    {path: '/manageindex', component: manageindex},
-    {path: '/manage', component: manage},
+    {path: '/managewebindex', component: managewebindex},
+    {path: '/webindex', component: webindex},
+    {path: '/webmanage', component: webmanage},
     {path: '/manageWebManage', component: manageWebManage}
 ];
 const router = new Router({
