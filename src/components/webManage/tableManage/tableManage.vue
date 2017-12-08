@@ -11,7 +11,8 @@
         </el-table-column>
         <el-table-column
                 prop="date"
-                v-for="titles in tableTitle"
+                v-for="titles in tableTitle" 
+                :key = "this"
                 :label="titles"
                 width="180">
         </el-table-column>

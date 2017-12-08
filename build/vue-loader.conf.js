@@ -19,4 +19,5 @@ module.exports = {
     img: 'src',
     image: 'xlink:href'
   }
+  // postcss:[require('postcss-px2rem')({'remUnit':37.5,'baseDpr':2})]           /*因为我是以750px(iphone6)宽度为基准，所以remUnit为37.5*/
 }
