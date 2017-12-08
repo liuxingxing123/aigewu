@@ -6,66 +6,66 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import Router from 'vue-router';
 import VueResource from 'vue-resource';
-import infor from './components/backstage_infor/backstage_infor.vue';
-import shop from './components/backstage_shop/backstage_shop.vue';
-import menber from './components/backstage_menber/backstage_menber.vue';
-import transation from './components/backstage_transation/backstage_transation.vue';
+import infor from './components/webManage/backstage_infor/backstage_infor.vue';
+import shop from './components/webManage/backstage_shop/backstage_shop.vue';
+import menber from './components/webManage/backstage_menber/backstage_menber.vue';
+import transation from './components/webManage/backstage_transation/backstage_transation.vue';
 
-import empmanages from './components/backstage_menber/empmanage/empmanage.vue';
-import card from './components/backstage_menber/backstage_card/backstage_card.vue';
-import integral from './components/backstage_menber/backstage_integral/backstage_integral.vue';
-import personal from './components/backstage_menber/backstage_personal/backstage_personal';
+import empmanages from './components/webManage/backstage_menber/empmanage/empmanage.vue';
+import card from './components/webManage/backstage_menber/backstage_card/backstage_card.vue';
+import integral from './components/webManage/backstage_menber/backstage_integral/backstage_integral.vue';
+import personal from './components/webManage/backstage_menber/backstage_personal/backstage_personal';
 
-import poststructureManage from './components/backstage_menber/empmanage/poststructureManage/poststructureManage.vue';
-import postManage from './components/backstage_menber/empmanage/postManage/postManage.vue';
-import salesmanManage from './components/backstage_menber/empmanage/salesmanManage/salesmanManage.vue';
-import staffManage from './components/backstage_menber/empmanage/staffManage/staffManage.vue';
+import poststructureManage from './components/webManage/backstage_menber/empmanage/poststructureManage/poststructureManage.vue';
+import postManage from './components/webManage/backstage_menber/empmanage/postManage/postManage.vue';
+import salesmanManage from './components/webManage/backstage_menber/empmanage/salesmanManage/salesmanManage.vue';
+import staffManage from './components/webManage/backstage_menber/empmanage/staffManage/staffManage.vue';
 
-import integralm from './components/backstage_menber/backstage_integral/integralManage/integralManage.vue';
-import integralShopManage from './components/backstage_menber/backstage_integral/integralShopManage/integralShopManage.vue';
-import backManage from './components/backstage_menber/backstage_integral/backManage/backManage.vue';
+import integralm from './components/webManage/backstage_menber/backstage_integral/integralManage/integralManage.vue';
+import integralShopManage from './components/webManage/backstage_menber/backstage_integral/integralShopManage/integralShopManage.vue';
+import backManage from './components/webManage/backstage_menber/backstage_integral/backManage/backManage.vue';
 
-import cardManage from './components/backstage_menber/backstage_card/cardManage/cardManage.vue';
+import cardManage from './components/webManage/backstage_menber/backstage_card/cardManage/cardManage.vue';
 
-import companyManage from './components/backstage_menber/backstage_personal/companyManage/companyManage.vue';
-import personalManage from './components/backstage_menber/backstage_personal/personalManage/personalManage.vue';
+import companyManage from './components/webManage/backstage_menber/backstage_personal/companyManage/companyManage.vue';
+import personalManage from './components/webManage/backstage_menber/backstage_personal/personalManage/personalManage.vue';
 
-import stockManage from './components/backstage_infor/stockManage/stockManage.vue';
-import financeManage from './components/backstage_infor/financeManage/financeManage.vue';
-import productManage from './components/backstage_infor/productManage/productManage.vue';
+import stockManage from './components/webManage/backstage_infor/stockManage/stockManage.vue';
+import financeManage from './components/webManage/backstage_infor/financeManage/financeManage.vue';
+import productManage from './components/webManage/backstage_infor/productManage/productManage.vue';
 
-import classificationManage from './components/backstage_infor/productManage/classificationManage/classificationManage.vue';
-import producsManage from './components/backstage_infor/productManage/producsManage/producsManage.vue';
+import classificationManage from './components/webManage/backstage_infor/productManage/classificationManage/classificationManage.vue';
+import producsManage from './components/webManage/backstage_infor/productManage/producsManage/producsManage.vue';
 
-import financesManage from './components/backstage_infor/financeManage/financesManage/financesManage.vue';
+import financesManage from './components/webManage/backstage_infor/financeManage/financesManage/financesManage.vue';
 
-import stocksManage from './components/backstage_infor/stockManage/stocksManage/stocksManage.vue';
-import purchaseManage from './components/backstage_infor/stockManage/purchaseManage/purchaseManage.vue';
-import proNumManage from './components/backstage_infor/stockManage/proNumManage/proNumManage.vue';
-import libraryManage from './components/backstage_infor/stockManage/libraryManage/libraryManage.vue';
+import stocksManage from './components/webManage/backstage_infor/stockManage/stocksManage/stocksManage.vue';
+import purchaseManage from './components/webManage/backstage_infor/stockManage/purchaseManage/purchaseManage.vue';
+import proNumManage from './components/webManage/backstage_infor/stockManage/proNumManage/proNumManage.vue';
+import libraryManage from './components/webManage/backstage_infor/stockManage/libraryManage/libraryManage.vue';
 
-import qualityManage from './components/backstage_transation/qualityManage/qualityManage.vue';
-import orderManage from './components/backstage_transation/orderManage/orderManage.vue';
-import contractManage from './components/backstage_transation/contractManage/contractManage.vue';
+import qualityManage from './components/webManage/backstage_transation/qualityManage/qualityManage.vue';
+import orderManage from './components/webManage/backstage_transation/orderManage/orderManage.vue';
+import contractManage from './components/webManage/backstage_transation/contractManage/contractManage.vue';
 
-import createOrderManage from './components/backstage_transation/orderManage/createOrderManage/createOrderManage.vue';
-import ordersManage from './components/backstage_transation/orderManage/ordersManage/ordersManage.vue';
+import createOrderManage from './components/webManage/backstage_transation/orderManage/createOrderManage/createOrderManage.vue';
+import ordersManage from './components/webManage/backstage_transation/orderManage/ordersManage/ordersManage.vue';
 
-import contractsManage from './components/backstage_transation/contractManage/contractsManage/contractsManage.vue';
+import contractsManage from './components/webManage/backstage_transation/contractManage/contractsManage/contractsManage.vue';
 
-import qualitysManage from './components/backstage_transation/qualityManage/qualitysManage/qualitysManage.vue';
+import qualitysManage from './components/webManage/backstage_transation/qualityManage/qualitysManage/qualitysManage.vue';
 
-import newsManage from './components/backstage_shop/newsManage/newsManage.vue';
-import caseManage from './components/backstage_shop/caseManage/caseManage.vue';
-import liveManage from './components/backstage_shop/liveManage/liveManage.vue';
-import recommendManage from './components/backstage_shop/recommendManage/recommendManage.vue';
-import scompanyManage from './components/backstage_shop/scompanyManage/scompanyManage.vue';
+import newsManage from './components/webManage/backstage_shop/newsManage/newsManage.vue';
+import caseManage from './components/webManage/backstage_shop/caseManage/caseManage.vue';
+import liveManage from './components/webManage/backstage_shop/liveManage/liveManage.vue';
+import recommendManage from './components/webManage/backstage_shop/recommendManage/recommendManage.vue';
+import scompanyManage from './components/webManage/backstage_shop/scompanyManage/scompanyManage.vue';
 
-import scompanysManage from './components/backstage_shop/scompanyManage/scompanysManage/scompanysManage.vue';
-import recommendsManage from './components/backstage_shop/recommendManage/recommendsManage/recommendsManage.vue';
-import newssManage from './components/backstage_shop/newsManage/newssManage/newssManage.vue';
-import livesManage from './components/backstage_shop/liveManage/livesManage/livesManage.vue';
-import casesManage from './components/backstage_shop/caseManage/casesManage/casesManage.vue';
+import scompanysManage from './components/webManage/backstage_shop/scompanyManage/scompanysManage/scompanysManage.vue';
+import recommendsManage from './components/webManage/backstage_shop/recommendManage/recommendsManage/recommendsManage.vue';
+import newssManage from './components/webManage/backstage_shop/newsManage/newssManage/newssManage.vue';
+import livesManage from './components/webManage/backstage_shop/liveManage/livesManage/livesManage.vue';
+import casesManage from './components/webManage/backstage_shop/caseManage/casesManage/casesManage.vue';
 
 import './common/style/style.css';
 Vue.use(Router);
