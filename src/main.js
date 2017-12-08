@@ -6,6 +6,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import Router from 'vue-router';
 import VueResource from 'vue-resource';
+
 import infor from './components/webManage/backstage_infor/backstage_infor.vue';
 import shop from './components/webManage/backstage_shop/backstage_shop.vue';
 import menber from './components/webManage/backstage_menber/backstage_menber.vue';
@@ -66,6 +67,13 @@ import recommendsManage from './components/webManage/backstage_shop/recommendMan
 import newssManage from './components/webManage/backstage_shop/newsManage/newssManage/newssManage.vue';
 import livesManage from './components/webManage/backstage_shop/liveManage/livesManage/livesManage.vue';
 import casesManage from './components/webManage/backstage_shop/caseManage/casesManage/casesManage.vue';
+
+import userlogin from './components/login/userlogin.vue';
+import managelogin from './components/login/managelogin.vue';
+import userindex from './components/userhome/userindex.vue';
+import manageindex from './components/webhome/manageindex.vue';
+import manage from './components/webManage/manage.vue';
+import businessManage from './components/businessManage/businessManage.vue';
 
 import './common/style/style.css';
 Vue.use(Router);
@@ -283,7 +291,13 @@ const routes = [
               ]
           }
       ]
-  }
+  },
+    {path: '/userlogin', component: userlogin},
+    {path: '/managelogin', component: managelogin},
+    {path: '/userindex', component: userindex},
+    {path: '/manageindex', component: manageindex},
+    {path: '/manage', component: manage},
+    {path: '/businessManage', component: businessManage}
 ];
 const router = new Router({
   routes // （缩写）相当于 routes: routes
@@ -295,4 +309,5 @@ new Vue({
   template: '<App/>',
   components: { App }
 });
-router.push('/staffManage');
+// router.push('/staffManage');
+// router.push('/userlogin');
