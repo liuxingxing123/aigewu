@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h1>这是商务室</h1>
+    <h1>这是平台管理页面</h1>
 </div>
 </template>
 

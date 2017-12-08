@@ -73,7 +73,7 @@ import managelogin from './components/login/managelogin.vue';
 import userindex from './components/userhome/userindex.vue';
 import manageindex from './components/webhome/manageindex.vue';
 import manage from './components/webManage/manage.vue';
-import businessManage from './components/businessManage/businessManage.vue';
+import manageWebManage from './components/manageWebManage/manageWebManage.vue';
 
 import './common/style/style.css';
 Vue.use(Router);
@@ -297,7 +297,7 @@ const routes = [
     {path: '/userindex', component: userindex},
     {path: '/manageindex', component: manageindex},
     {path: '/manage', component: manage},
-    {path: '/businessManage', component: businessManage}
+    {path: '/manageWebManage', component: manageWebManage}
 ];
 const router = new Router({
   routes // （缩写）相当于 routes: routes
