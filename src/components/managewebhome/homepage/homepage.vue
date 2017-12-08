@@ -48,7 +48,6 @@ export default {
             },500);
   	 	},
  	handleleave(){
- 		console.log(111)
  		this.initswiper()
  		this.currentIndex = null;
      },
@@ -61,7 +60,6 @@ export default {
 	      var divy2 = box.offsetTop + box.offsetHeight;
 	      if( x < divx1 || x > divx2 || y < divy1 || y > divy2){
 	    	clearInterval(timer);
-	    	console.log(111)
 		}
      },
      handleenter(e){
