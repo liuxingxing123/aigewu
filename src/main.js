@@ -82,221 +82,224 @@ Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
 const routes = [
-  {path: '/infor', component: infor,
-      children: [
-          {
-              path: '/stockManage',
-              component: stockManage,
-              children: [
-                  {
-                      path: '/stocksManage',
-                      component: stocksManage
-                  },
-                  {
-                      path: '/purchaseManage',
-                      component: purchaseManage
-                  },
-                  {
-                      path: '/proNumManage',
-                      component: proNumManage
-                  },
-                  {
-                      path: '/libraryManage',
-                      component: libraryManage
-                  }
-              ]
-          },
-          {
-              path: '/productManage',
-              component: productManage,
-              children: [
-                  {
-                      path: '/classificationManage',
-                      component: classificationManage
-                  },
-                  {
-                      path: '/producsManage',
-                      component: producsManage
-                  }
-              ]
-          },
-          {
-              path: '/financeManage',
-              component: financeManage,
-              children: [
-                  {
-                      path: '/financesManage',
-                      component: financesManage
-                  }
-              ]
-          }
-      ]
-  },
-  {path: '/shop', component: shop,
-      children: [
-          {
-              path: '/newsManage',
-              component: newsManage,
-              children: [
-                  {
-                      path: '/newssManage',
-                      component: newssManage
-                  }
-              ]
-          },
-          {
-              path: '/caseManage',
-              component: caseManage,
-              children: [
-                  {
-                      path: '/casesManage',
-                      component: casesManage
-                  }
-              ]
-          },
-          {
-              path: '/liveManage',
-              component: liveManage,
-              children: [
-                  {
-                      path: '/livesManage',
-                      component: livesManage
-                  }
-              ]
-          },
-          {
-              path: '/recommendManage',
-              component: recommendManage,
-              children: [
-                  {
-                      path: '/recommendsManage',
-                      component: recommendsManage
-                  }
-              ]
-          },
-          {
-              path: '/scompanyManage',
-              component: scompanyManage,
-              children: [
-                  {
-                      path: '/scompanysManage',
-                      component: scompanysManage
-                  }
-              ]
-          }
-      ]
-  },
-  {path: '/menber', component: menber,
-      children: [
-          {
-              path: '/empmanages',
-              component: empmanages,
-              children: [
-                  {
-                      path: '/poststructureManage',
-                      component: poststructureManage
-                  },
-                  {
-                      path: '/postManage',
-                      component: postManage
-                  },
-                  {
-                      path: '/salesmanManage',
-                      component: salesmanManage
-                  },
-                  {
-                      path: '/staffManage',
-                      component: staffManage
-                  }
-                  ]
-          },
-          {
-              path: '/card',
-              component: card,
-              children: [
-                  {
-                      path: '/cardManage',
-                      component: cardManage
-                  }
-              ]
-          },
-          {
-              path: '/integral',
-              component: integral,
-              children: [
-                  {
-                      path: '/integralm',
-                      component: integralm
-                  },
-                  {
-                      path: '/integralShopManage',
-                      component: integralShopManage
-                  },
-                  {
-                      path: '/backManage',
-                      component: backManage
-                  }
-              ]
-          },
-          {
-              path: '/personal',
-              component: personal,
-              children: [
-                  {
-                      path: '/companyManage',
-                      component: companyManage
-                  },
-                  {
-                      path: '/personalManage',
-                      component: personalManage
-                  }
-              ]
-          }
-  ]
-  },
-  {path: '/transation', component: transation,
-      children: [
-          {
-              path: '/qualityManage',
-              component: qualityManage,
-              children: [
-                  {
-                      path: '/qualitysManage',
-                      component: qualitysManage
-                  }
-              ]
-          },
-          {
-              path: '/orderManage',
-              component: orderManage,
-              children: [
-                  {
-                      path: '/ordersManage',
-                      component: ordersManage
-                  },
-                  {
-                      path: '/createOrderManage',
-                      component: createOrderManage
-                  }
-              ]
-          },
-          {
-              path: '/contractManage',
-              component: contractManage,
-              children: [
-                  {
-                      path: '/contractsManage',
-                      component: contractsManage
-                  }
-              ]
-          }
-      ]
-  },
     {path: '/userlogin', component: userlogin},
     {path: '/managelogin', component: managelogin},
     {path: '/managewebindex', component: managewebindex},
     {path: '/webindex', component: webindex},
-    {path: '/webmanage', component: webmanage},
+    {path: '/webmanage', component: webmanage,
+        children:[
+            {path: '/infor', component: infor,
+                children: [
+                    {
+                        path: '/stockManage',
+                        component: stockManage,
+                        children: [
+                            {
+                                path: '/stocksManage',
+                                component: stocksManage
+                            },
+                            {
+                                path: '/purchaseManage',
+                                component: purchaseManage
+                            },
+                            {
+                                path: '/proNumManage',
+                                component: proNumManage
+                            },
+                            {
+                                path: '/libraryManage',
+                                component: libraryManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/productManage',
+                        component: productManage,
+                        children: [
+                            {
+                                path: '/classificationManage',
+                                component: classificationManage
+                            },
+                            {
+                                path: '/producsManage',
+                                component: producsManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/financeManage',
+                        component: financeManage,
+                        children: [
+                            {
+                                path: '/financesManage',
+                                component: financesManage
+                            }
+                        ]
+                    }
+                ]
+            },
+            {path: '/shop', component: shop,
+                children: [
+                    {
+                        path: '/newsManage',
+                        component: newsManage,
+                        children: [
+                            {
+                                path: '/newssManage',
+                                component: newssManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/caseManage',
+                        component: caseManage,
+                        children: [
+                            {
+                                path: '/casesManage',
+                                component: casesManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/liveManage',
+                        component: liveManage,
+                        children: [
+                            {
+                                path: '/livesManage',
+                                component: livesManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/recommendManage',
+                        component: recommendManage,
+                        children: [
+                            {
+                                path: '/recommendsManage',
+                                component: recommendsManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/scompanyManage',
+                        component: scompanyManage,
+                        children: [
+                            {
+                                path: '/scompanysManage',
+                                component: scompanysManage
+                            }
+                        ]
+                    }
+                ]
+            },
+            {path: '/menber', component: menber,
+                children: [
+                    {
+                        path: '/empmanages',
+                        component: empmanages,
+                        children: [
+                            {
+                                path: '/poststructureManage',
+                                component: poststructureManage
+                            },
+                            {
+                                path: '/postManage',
+                                component: postManage
+                            },
+                            {
+                                path: '/salesmanManage',
+                                component: salesmanManage
+                            },
+                            {
+                                path: '/staffManage',
+                                component: staffManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/card',
+                        component: card,
+                        children: [
+                            {
+                                path: '/cardManage',
+                                component: cardManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/integral',
+                        component: integral,
+                        children: [
+                            {
+                                path: '/integralm',
+                                component: integralm
+                            },
+                            {
+                                path: '/integralShopManage',
+                                component: integralShopManage
+                            },
+                            {
+                                path: '/backManage',
+                                component: backManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/personal',
+                        component: personal,
+                        children: [
+                            {
+                                path: '/companyManage',
+                                component: companyManage
+                            },
+                            {
+                                path: '/personalManage',
+                                component: personalManage
+                            }
+                        ]
+                    }
+                ]
+            },
+            {path: '/transation', component: transation,
+                children: [
+                    {
+                        path: '/qualityManage',
+                        component: qualityManage,
+                        children: [
+                            {
+                                path: '/qualitysManage',
+                                component: qualitysManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/orderManage',
+                        component: orderManage,
+                        children: [
+                            {
+                                path: '/ordersManage',
+                                component: ordersManage
+                            },
+                            {
+                                path: '/createOrderManage',
+                                component: createOrderManage
+                            }
+                        ]
+                    },
+                    {
+                        path: '/contractManage',
+                        component: contractManage,
+                        children: [
+                            {
+                                path: '/contractsManage',
+                                component: contractsManage
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
     {path: '/manageWebManage', component: manageWebManage}
 ];
 const router = new Router({
