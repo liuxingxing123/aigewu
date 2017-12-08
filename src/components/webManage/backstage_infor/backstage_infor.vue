@@ -1,10 +1,10 @@
 <template>
   <el-container>
     <el-row :gutter="0" class="mune">
-      <el-col :span="4" :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
+      <el-col :span="4" :xs="3" :sm="3" :md="3" :lg="3" :xl="3">
         <leftmenu :iconList="iconList" :listText="listText" :linkto="linkto"></leftmenu>
       </el-col>
-      <el-col :span="20" :xs="20" :sm="20" :md="20" :lg="20" :xl="20">
+      <el-col :span="20" :xs="21" :sm="21" :md="21" :lg="21" :xl="21">
         <keep-alive>
           <router-view></router-view>
         </keep-alive>
@@ -20,7 +20,7 @@
             return {
                 iconList:["icon-cpxx","icon-cwgl","icon-kcgl","",""],
                 listText:["产品管理","财务管理","库存管理","",""],
-                linkto:["/productManage","/financeManage","/stockManage","",""]
+                linkto:["/producsManage","/financesManage","/proNumManage","",""]
             };
         },
         methods: {

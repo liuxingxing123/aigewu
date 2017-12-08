@@ -3,8 +3,7 @@
             :data="tableData"
             style="width: 100%"
             height="550"
-            :default-sort = "{prop: 'date', order: 'descending'}"
-    >
+            :default-sort = "{prop: 'date', order: 'descending'}">
         <el-table-column
                 type="selection"
                 width="55">
@@ -13,10 +12,11 @@
                 prop="date"
                 v-for="titles in tableTitle" 
                 :key = "this"
-                :label="titles"
-                width="180">
+                :label="titles">
         </el-table-column>
-        <el-table-column label="操作">
+        <el-table-column
+                label="操作"
+                width="55">
             <template slot-scope="scope">
                 <el-button
                         size="mini"
@@ -41,10 +41,11 @@
                         }
                     ];
                 }
-            },
+            }
         },
         data() {
             return {
+                tableData:[]
             }
         },
         methods: {

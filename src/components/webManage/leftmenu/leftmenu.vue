@@ -79,6 +79,7 @@
 <style>
     .leftMenu{
         padding-top: 30px;
+        text-align: center;
     }
     .mune .leftMenu .routerA{
         font-size: 1em;

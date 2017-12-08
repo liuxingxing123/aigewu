@@ -1,19 +1,9 @@
 <template>
-    <el-row :gutter="0" style="margin: 30px 0px 30px 20px">
-        <el-col :xs="24" :sm="7" :md="7" :lg="7" :xl="7">
-            <el-row :gutter="0">
-                <el-col :xs="7" :sm="7" :md="7" :lg="7" :xl="7" style="margin-top: 10px;font-size: 0.3em;">
-                    请输入搜索条件：
-                </el-col>
-                <el-col :xs="17" :sm="17" :md="17" :lg="17" :xl="17">
-                    <el-input v-model="serchinput" placeholder="请输入内容"></el-input>
-                </el-col>
-            </el-row>
-        </el-col>
-        <el-col :xs="24" :sm="6" :md="8" :lg="9" :xl="11">
-            <el-button type="primary" @click="serchFun">点击搜索</el-button>
-        </el-col>
-    </el-row>
+    <div class="serchBox">
+        <span style="float: left;margin-top: 10px">请输入搜索条件：</span>
+        <el-input v-model="serchinput" placeholder="请输入内容" style="float: left; width: 60%;margin: 0px 30px 0 10px;"></el-input>
+        <el-button type="primary" @click="serchFun">点击搜索</el-button>
+    </div>
 </template>
 
 <script type="text/ecmascript-6">
@@ -32,5 +22,9 @@
 </script>
 
 <style>
-
+    .serchBox{
+        margin-top: 20px;
+        float: left;
+        width: 50%;
+    }
 </style>

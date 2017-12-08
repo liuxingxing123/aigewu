@@ -302,10 +302,6 @@ export default new Router({
   }
     ]
 },
-
-
-
-
     //刘星星的路由
     {
       path: '/',
