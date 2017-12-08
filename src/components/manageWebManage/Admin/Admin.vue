@@ -6,7 +6,7 @@
 		  </el-container>
 		  <el-container class="hahaha">
 		    <el-aside width="200px">
-		    	<router-link to="/adminstystemcontrol" >后台管理</router-link>
+		    	<router-link to="/adminstystemcontrol">后台管理</router-link>
 		    	<router-link to="/audit" >开通审核</router-link>
 		    	<router-link to="/signup" >平台签约业务员</router-link>
 		    	<router-link to="/score" >返现积分</router-link>

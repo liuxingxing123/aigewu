@@ -349,8 +349,9 @@ export default new Router({
 		    }
        ]
     },
-    { path: '/a', redirect: '/admin' }
+    { path: '/adminstystemcontrol', redirect: '/admin' }
   ],
   mode:'history',
-  linkActiveClass:'active'
+  linkActiveClass:'active',
+  linkExactActiveClass:"exactactive"
 })
