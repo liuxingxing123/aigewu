@@ -4,7 +4,7 @@
       <el-col :span="4" :xs="3" :sm="3" :md="3" :lg="3" :xl="3">
         <leftmenu :iconList="iconList" :listText="listText" :linkto="linkto"></leftmenu>
       </el-col>
-      <el-col :span="20" :xs="21" :sm="21" :md="21" :lg="21" :xl="21">
+      <el-col :span="20" :xs="21" :sm="21" :md="21" :lg="21" :xl="21" class="centerBox">
         <keep-alive>
           <router-view></router-view>
         </keep-alive>
@@ -32,5 +32,7 @@
 </script>
 
 <style>
-
+  .centerBox{
+    padding: 0 20px;
+  }
 </style>

@@ -42,4 +42,8 @@
   .centerBox{
     padding: 0 20px;
   }
+  .formBox{
+    width: 40%;
+    margin-top: 20px;
+  }
 </style>
