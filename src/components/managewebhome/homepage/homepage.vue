@@ -1,74 +1,75 @@
 <template>
   <div>
             <vheader></vheader>
+            <div class="wrapbox">
             <el-container class="content">
-            <keep-alive>
             	<el-row>
-				  <el-col  :span="21" ><div id="box" ref="box" @mousemove="handlenice" @mouseleave="handleleave" class="grid-content bg-purple" >
-					<div class="newsitem" v-for="(item,i) in listImg" :key="this" :data-id="item.id" @mouseenter="handleenter">
-						<img :src="item.imgSrc" :alt="item.imgSrc" width="100%" height="100%">
-						<div class="logoshow" v-show="currentIndex ==item.id">{{item.text}}</div>
-					</div>
+    				  <el-col  :span="21" ><div  class="grid-content bg-purple" >
+             <div class="swiper-container">
+                <div class="swiper-wrapper">
+               <div class="swiper-slide" v-for="item in listImg" :key="this" @click="handlegetitem(item,$event)"> <a href="/news" target="_self" style="display:inline-block"> 
+                        <img width="100%" height="200" :src="item.imgSrc"></a>
+                  </div>
+                </div>
+                
+                </div>
+
 				  </div>
 				  </el-col>
 				  <el-col class="elcol" :span="3"><div class="grid-content content-right bg-purple-light">{{contentright}}</div></el-col>
 				</el-row>
-				</keep-alive>
             </el-container>
             <div class="f1">
-            	<vcontent  :vcontent="options"></vcontent>
-            </div>
+            	<vcontent :href="hrefpath1"  :vcontent="options"></vcontent>
+            </div>               
             <div class="f2">
-            	<vcontent  :vcontent="otheroptions"></vcontent>
+            	<vcontent :href="hrefpath2" :vcontent="otheroptions"></vcontent>
             </div>
+            </div>
+
   </div>
 </template>
 
 <script>
 import vheader from '@/components/managewebhome/vheader/vheader'
 import vcontent from '@/components/managewebhome/content/vcontent'
-let timer = null
+import Swiper from "../../../../static/js/swiper-3.4.2.min.js"
 export default {
    components:{
     vheader,
     vcontent
    },
-   created(){
-   	let box = this.$refs.box;this.initswiper()
+   mounted(){//这里不能使用created
+         this._initswiper()
    },
    methods:{
-   	initswiper(){
-   		clearInterval(timer)
-   		timer=setInterval(()=>{
-                var l=box.offsetLeft+10;
-                if(l>=0){
-                    l=-box.clientWidth/2;
-                }
-                box.style.left=l+"px";
-            },500);
-  	 	},
- 	handleleave(){
- 		this.initswiper()
- 		this.currentIndex = null;
+     _initswiper(){
+      var myswiper = new Swiper('.swiper-container', {
+          slidesPerView: 4,
+          initialSlide:1,
+          centeredSlides: true,
+          spaceBetween: 30,
+          freeMode:true,
+          grabCursor: true,
+           autoPlay:3000,
+           autoplayDisableOnInteraction : true,
+             speed: 500,  
+            loop: true,  
+            observer:true,  
+            observeParents:true,  
+        });
      },
-     handlenice(e){
-     	  var x=e.clientX;
-	      var y=e.clientY;
-	      var divx1 = box.offsetLeft;
-	      var divy1 = box.offsetTop;
-	      var divx2 = box.offsetLeft + box.offsetWidth;
-	      var divy2 = box.offsetTop + box.offsetHeight;
-	      if( x < divx1 || x > divx2 || y < divy1 || y > divy2){
-	    	clearInterval(timer);
-		}
-     },
-     handleenter(e){
-     	 let targetid = e.currentTarget.dataset.id;
-		this.currentIndex = targetid;
+     handlegetitem(db,e){
+      let targetnewsid = db.id;
+      window.localStorage.setItem('newsid', targetnewsid);
+
      }
+
    },
    data(){
    	return {
+      hrefpath1:'/wrapperclass',
+      hrefpath2:'/otherclass',
    		currentIndex:null,
    		contentright:"厂商推荐",
    		options:{
@@ -187,11 +188,52 @@ export default {
 </script>
 
 <style scoped>
+
+
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+    height:200px;
+    width: 25%;
+      overflow: hidden;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+  .wrapbox{
+    width:90%;
+    margin:0 auto;
+  }
+  .el-carousel__item{
+   background:#666;
+
+  }
+   .el-carousel__item h3{
+      width:100%;
+  }
+
 	.f2{
 		padding-bottom: 20px;
 	}
 	.content{
-		height: 160px;
+		height: 220px;
 	}
 	.el-row{
 		width: 100%;
@@ -213,9 +255,8 @@ export default {
 		z-index: 2;
 	}
 	.grid-content{
-		width: 200%;
+		width: 100%;
 		position: absolute;
-		height: 140px;
 		left: 10px;
 		top: 10px;
 		overflow: hidden;
@@ -252,6 +293,8 @@ export default {
 		left: 50%;
 		margin-left: -15px;
 		width: 30px;
+      top:50%;
+      margin-top:-70px;
 		font-size: 30px;
 		color: white
 	}

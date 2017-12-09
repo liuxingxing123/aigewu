@@ -9,10 +9,11 @@
 				<div class="leftadvertising" @mouseleave="handleadverthide"   v-show="leftadvertising == vcontent.contentleft.id">{{vcontent.contentleft.text}}</div>
 			  </el-col>
  			  <el-col :span="20"><div class="grid-content contentright bg-purple-light" @mouseleave="handleleave">
- 			  	<div class="item"  v-for="(item,i) in vcontent.contentright" :key="i" >
-					<div class="itemimg" :data-id="item.id"  v-on:mouseenter="handleshow"><img  :src="item.imgSrc"></div>
-
+ 			  	<div class="item"  v-for="(item,i) in vcontent.contentright" :key="i" @click="handlegopage(item,$event)">
+					<div class="itemimg" :data-id="item.id"  v-on:mouseenter="handleshow"><img  :src="item.imgSrc" width="220" height="154"></div>
+					 <a :href="href" target="_self" style="display:inline-block">
 					<div class="canshow" v-show="currentItem ==item.id">{{item.title}}</div>
+					</a>
 				</div>
  			  </div></el-col>
 			</el-row>
@@ -25,6 +26,9 @@
 		props:{
 			vcontent:{
 				type:Object
+			},
+			href:{
+				type:String
 			}
 		},
 		data(){
@@ -40,6 +44,10 @@
 			handleshow(e){
 				 let targetid = e.currentTarget.dataset.id;
 				 this.currentItem = targetid;
+			},
+			handlegopage(db,e){
+						 let targetnewsid = db.id;
+     					window.localStorage.setItem('classid', targetnewsid);
 			},
 			handleleave(){
 				this.currentItem = null;
@@ -127,7 +135,6 @@
 	}
 	.itemimg img{
 		width: 100%!important;
-		height: 100%!important;
 	}
 	.item .canshow{
 		position: absolute;

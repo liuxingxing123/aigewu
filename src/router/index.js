@@ -77,6 +77,9 @@ const score = r => require.ensure([], () => r(require('@/components/manageWebMan
 const advertising = r => require.ensure([], () => r(require('@/components/manageWebManage/advertising/advertising.vue')), 'advertising')
 const live = r => require.ensure([], () => r(require('@/components/manageWebManage/live/live.vue')), 'live')
 const shoping = r => require.ensure([], () => r(require('@/components/manageWebManage/shoping/shoping.vue')), 'shoping')
+const news = r => require.ensure([], () => r(require('@/components/managewebhome/news/news.vue')), 'news')
+const wrapperclass = r => require.ensure([], () => r(require('@/components/managewebhome/wrapperclass/wrapperclass.vue')), 'wrapperclass')
+const otherclass = r => require.ensure([], () => r(require('@/components/managewebhome/otherclass/otherclass.vue')), 'otherclass')
 const App = r => require.ensure([], () => r(require('@/App')), 'App')
 
 Vue.use(Router)
@@ -302,12 +305,22 @@ export default new Router({
   }
     ]
 },
+
+
+
+
     //刘星星的路由
     {
       path: '/',
       name: 'homepage',
-      component: homepage
+      component: homepage,
+      children:[
+
+      ]
     },
+    { path: '/news',name:'news', component: news },
+    { path: '/wrapperclass',name:'wrapperclass', component: wrapperclass },
+    { path: '/otherclass',name:'otherclass', component: otherclass },
      {
       path: '/admin',
       name: 'Admin',
@@ -345,7 +358,7 @@ export default new Router({
 		    }
        ]
     },
-    { path: '/adminstystemcontrol', redirect: '/admin' }
+    { path: '/admin', redirect: '/adminstystemcontrol' }
   ],
   mode:'history',
   linkActiveClass:'active',
