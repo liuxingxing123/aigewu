@@ -6,7 +6,7 @@
               		<span class="username">用户名 :127372173712 </span>
               		<el-button type="primary"  @click="login" plain>登录</el-button>
               		<el-button type="primary"  @click="register" plain>注册</el-button>
-              		 <a  href="/admin" target="_self"><el-button style="margin-left:10px" type="primary" plain>平台管理<i class="el-icon-d-arrow-right"></i></el-button></a>
+              		 <a  href="/Admin" target="_self"><el-button style="margin-left:10px" type="primary" plain>平台管理<i class="el-icon-d-arrow-right"></i></el-button></a>
               	</div>
               </el-header>
 			    <el-main>
@@ -79,7 +79,11 @@
 					  </div>
 				  </el-col>
 				  <el-col :span="14"><div class="grid-content bg-purple-light">
-				  	<swiper></swiper>
+						    <el-carousel trigger="click" height="450px">
+						      <el-carousel-item v-for="item in listImg" :key="this">
+						        <h3><img :src="item.imgSrc" width="100%" height="450"></h3>
+						      </el-carousel-item>
+						    </el-carousel>
 				  </div></el-col>
 				  <el-col :span="5"><div class="grid-content bg-purple">
 				  	<el-col>
@@ -186,7 +190,27 @@ export default {
 	        form1:{
 	        	name:'',
 	        	pwd:''
-	        },
+	        },	listImg:[
+				{
+					imgSrc:'src/components/managewebhome/swiper/1.jpg',text:"1111111",id:0
+
+				},
+				{
+					imgSrc:'src/components/managewebhome/swiper/2.jpg',text:"22222",id:1
+
+				},
+				{
+					
+					imgSrc:'src/components/managewebhome/swiper/3.jpg',text:"3333333",id:2
+				},
+				{
+					
+					imgSrc:'src/components/managewebhome/swiper/4.jpg',text:"44444444444",id:3
+				},
+				{
+					imgSrc:'src/components/managewebhome/swiper/1.jpg',text:"1111111",id:4
+				}
+				],
 	        formLabelWidth: '80px',
 	        isCollapse: false,
 	        menurighttitle:"好吃的汉堡包",

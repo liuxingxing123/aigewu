@@ -78,3 +78,7 @@ q:before,q:after {
 .active{
     color:red;
 }
+.exactactive{
+    color:#09f;
+    background:"#545c64";
+}

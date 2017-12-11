@@ -322,9 +322,15 @@ export default new Router({
     { path: '/wrapperclass',name:'wrapperclass', component: wrapperclass },
     { path: '/otherclass',name:'otherclass', component: otherclass },
      {
-      path: '/admin',
+      path: '/Admin',
       name: 'Admin',
       component: Admin,
+      beforeRouteEnter (to, from, next) {
+          next ( vm => {
+            // 这里vm就是当前页面的实例，可以执行methods中方法
+             vm.handleonceclick()
+          })
+        },
        children: [
        		{
 		      path: '/adminstystemcontrol',
