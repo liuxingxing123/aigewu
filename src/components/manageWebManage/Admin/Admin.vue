@@ -54,7 +54,7 @@
     </el-menu>
 		    	
 		    </el-aside>
-		    <el-main>
+		    <el-main class="adminmain" >
 		    	<router-view></router-view>
 		    	<div v-if="nana">
 		    		<adminstystemcontrol></adminstystemcontrol>
@@ -131,4 +131,12 @@ import adminstystemcontrol from '@/components/manageWebManage/adminstystemcontro
     display: none;
 }
 
+.adminmain{
+		width:100%;
+		height:100%;
+		overflow: auto;
+}
+.adminmain::-webkit-scrollbar {
+    display: none;
+}
 </style>
