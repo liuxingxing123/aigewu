@@ -29,7 +29,7 @@
 			  <el-col :span="2" v-for="item in contents" :key="this" class="item"><div class="grid-content bg-purple-dark">{{item}}</div>
 			  </el-col>
 			</el-row>
-			<el-row class="maincontent1 maincontent" v-for="item in contentObj">
+			<el-row class="maincontent1 maincontent" v-for="item in contentObj" :key="this">
 				 <el-col :span="2" class="checked"><div class="grid-content bg-purple-light">
 				 	<el-checkbox v-model="item.checked"></el-checkbox>
 				 </div>
